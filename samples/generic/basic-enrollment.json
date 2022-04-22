@@ -1,0 +1,50 @@
+{
+    "config": {
+      "submit": "",
+      "successUrl": "",
+      "theme": "",
+      "externalId": ""
+    },
+    "head": {
+      "title": "Basic Enrollment Form",
+      "logo": "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+    },
+    "body": {
+      "items": [
+        {
+          "type": "text",
+          "label": "First name",
+          "placeholder": "E.g. Jane"
+        },
+        {
+          "type": "text",
+          "label": "Last name",
+          "placeholder": "E.g. Doe",
+          "required": true
+        },
+        {
+          "type": "radio",
+          "label": "Enrollment type",
+          "options": [
+            {
+              "label": "Full-time",
+              "value": "full"
+            },
+            {
+              "label": "Part-time",
+              "value": "part"
+            },
+            {
+              "label": "As needed",
+              "value": "needed"
+            }
+          ],
+          "required": true
+        },
+        {
+          "type": "submit",
+          "label": "Submit"
+        }
+      ]
+    }
+  }
