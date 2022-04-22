@@ -14,7 +14,7 @@ xhr.onreadystatechange = function () {
     if (this.readyState != 4) return;
 
     if (this.status == 200) {
-        var morf = JSON.parse(this.responseText);
+        window.morf = JSON.parse(this.responseText);
         var embed = document.createElement('script');
         embed.setAttribute('src','https://render.getmorf.io/js/embed.js');
         document.body.appendChild(embed);
