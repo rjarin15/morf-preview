@@ -1,0 +1,163 @@
+{
+  "config": {
+    "submit": "",
+    "successUrl": "http://getmorf.io,/",
+    "theme": "",
+    "externalId": ""
+  },
+  "head": {
+    "title": "Letter of Recommendation",
+    "logo": "https://www.fscj.edu/images/default-source/logos/fscj/fscj-logo-horizontal-color.png?sfvrsn=ef7aa6d5_10"
+  },
+  "body": {
+    "items": [
+      {
+        "type": "panel",
+        "label": "Student Information",
+        "width": "full",
+        "items": [
+          {
+            "type": "text",
+            "label": "Student First Name",
+            "placeholder": "E.g. John",
+            "bind": "student.firstName"
+          },
+          {
+            "type": "text",
+            "label": "Student Last Name",
+            "placeholder": "E.g. Doe",
+            "bind": "student.lastName"
+          },
+          {
+            "type": "text",
+            "label": "Student Email",
+            "placeholder": "E.g. john.doe@fscj.edu",
+            "bind": "student.email"
+          },
+          {
+            "type": "text",
+            "label": "Student Phone",
+            "placeholder": "E.g. 555-123-1234",
+            "bind": "student.phone"
+          },
+          {
+            "type": "text",
+            "label": "Class Year",
+            "placeholder": "E.g. 2022",
+            "bind": "student.class.year"
+          }
+        ]
+      },
+      {
+        "type": "panel",
+        "label": "Faculty Information",
+        "width": "full",
+        "items": [
+          {
+            "type": "text",
+            "label": "Faculty Staff First Name",
+            "placeholder": "E.g. Jane",
+            "bind": "faculty.staff.firstName"
+          },
+          {
+            "type": "text",
+            "label": "Faculty Staff Last Name",
+            "placeholder": "E.g. Doe",
+            "bind": "faculty.staff.lastName"
+          }
+        ]
+      },
+      {
+        "type": "panel",
+        "width": "full",
+        "label": "References (Up to 10)",
+        "min": 1,
+        "max": 10,
+        "bind": "references",
+        "items": [
+          {
+            "type": "panel",
+            "width": "full",
+            "items": [
+              {
+                "type": "text",
+                "label": "First Name",
+                "placeholder": "E.g. Bob"
+              },
+              {
+                "type": "text",
+                "label": "Last Name",
+                "placeholder": "E.g. Ross"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "label": "Type(s) of Information to Release",
+        "bind": "release.info",
+        "options": [
+          {
+            "label": "Dates of attendance",
+            "value": "dates"
+          },
+          {
+            "label": "Courses Taken",
+            "value": "courses"
+          },
+          {
+            "label": "Grades Received",
+            "value": "grades"
+          },
+          {
+            "label": "GPA",
+            "value": "gpa"
+          },
+          {
+            "label": "Academic Progress",
+            "value": "progress"
+          },
+          {
+            "label": "Honors Received",
+            "value": "honors"
+          },
+          {
+            "label": "Projects Undertaken",
+            "value": "projects"
+          },
+          {
+            "label": "Other",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Other (Please Specify)",
+        "placeholder": "E.g. Extracurricular activities"
+      },
+      {
+        "type": "radio",
+        "width": "full",
+        "label": "Waiver of right to access this recommendation",
+        "description": "I waive my right to view this recommendation and/or know the contents of any oral communication regarding this recommendation.",
+        "name": "waiver",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "y"
+          },
+          {
+            "label": "No",
+            "value": "n"
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "label": "Submit"
+      }
+    ]
+  }
+}
