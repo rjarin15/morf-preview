@@ -1,4 +1,4 @@
-[![GitHub Pages](https://github.com/aftialabs/morf-samples/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/aftialabs/morf-samples/actions/workflows/pages/pages-build-deployment)
+[![GitHub Pages](https://github.com/aftialabs/morf-preview/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/aftialabs/morf-preview/actions/workflows/pages/pages-build-deployment)
 # MORF Preview
 
 A repository containing sample MORF forms used for demonstration purposes.
