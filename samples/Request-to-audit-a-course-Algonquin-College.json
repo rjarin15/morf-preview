@@ -1,0 +1,76 @@
+{
+    "config": {
+      "submit": "",
+      "successUrl": "http://getmorf.io,/",
+      "theme": "",
+      "externalId": ""
+    },
+    "head": {
+      "title": "Request To Audit a Credit Course",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Algonquin_College_logo.svg/1280px-Algonquin_College_logo.svg.png"
+    },
+    "body": {
+      "items": [
+        {
+          "type": "panel",
+          "label": "Course Information",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Course To Be Audited",
+              "placeholder": "E.g. Algebra 101"
+            },
+            {
+              "type": "text",
+              "label": "Section #",
+              "placeholder": "E.g. 3"
+            },
+            {
+              "type": "text",
+              "label": "Term",
+              "placeholder": "E.g. 1"
+            },
+            {
+              "type": "text",
+              "label": "Course Title",
+              "placeholder": "E.g. Algebra 101"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Student Information",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Student Number",
+              "placeholder": "E.g. Jane"
+            },
+            {
+              "type": "text",
+              "label": "Student Name",
+              "placeholder": "E.g. Doe"
+            },
+             {
+              "type": "text",
+              "label": "Home Telephone",
+              "placeholder": "555-123-1234"
+            },
+             {
+              "type": "text",
+              "label": "Other Telephone",
+              "placeholder": "555-123-1234"
+            }
+          ]
+        },
+              {
+          "type": "submit",
+          "label": "Submit"
+        }
+        
+      ]
+    }
+  }
+  
