@@ -1,7 +1,7 @@
 {
   "config": {
-    "submit": "",
-    "successUrl": "http://getmorf.io,/",
+    "submit": "https://prod-29.canadacentral.logic.azure.com:443/workflows/3b6bf1c246fd473f98b785a482b3729d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TScPQPih1QL9K3b_RmIRBDtOhKyQoiBBcfSkejPAxbc",
+    "successUrl": "https://www.fscj.edu",
     "theme": "",
     "externalId": ""
   },
@@ -73,21 +73,24 @@
         "label": "References (Up to 10)",
         "min": 1,
         "max": 10,
-        "bind": "references",
+        "name": "references",
         "items": [
           {
             "type": "panel",
             "width": "full",
+            "name": "contact",
             "items": [
               {
                 "type": "text",
                 "label": "First Name",
-                "placeholder": "E.g. Bob"
+                "placeholder": "E.g. Bob",
+                "name": "firstName"
               },
               {
                 "type": "text",
                 "label": "Last Name",
-                "placeholder": "E.g. Ross"
+                "placeholder": "E.g. Ross",
+                "name": "lastName"
               }
             ]
           }
@@ -135,7 +138,15 @@
       {
         "type": "text",
         "label": "Other (Please Specify)",
-        "placeholder": "E.g. Extracurricular activities"
+        "placeholder": "E.g. Extracurricular activities",
+        "bind": "release.other"
+      },
+      {
+        "type": "text",
+        "label": "Release Purpose",
+        "placeholder": "E.g. Extracurricular activities",
+        "width": "full",
+        "bind": "release.purpose"
       },
       {
         "type": "radio",
