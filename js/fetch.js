@@ -4,7 +4,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 let formRef = params.form;
 
-var morfRoot = 'https://render.getmorf.io/v1';
+var morfRoot = 'https://cdn.getmorf.io';
 
 if (formRef){
     const xhr = new XMLHttpRequest();
