@@ -4,8 +4,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 let formRef = params.form;
 
-var morfRoot = 'https://cdn.getmorf.io';
-
 if (formRef){
     const xhr = new XMLHttpRequest();
     xhr.open("GET", formRef, true);
@@ -16,14 +14,14 @@ if (formRef){
 
         if (this.status == 200) {
             window.morfConfig = {
-                root: morfRoot,
+                root: 'https://render.getmorf.io/v1',
                 siteKey: 'ad702064b01c41a88c0946b0ea250ce2',
                 targetId: 'morfcontent',
                 definition: JSON.parse(this.responseText)
             };
 
             var embed = document.createElement('script');
-            embed.setAttribute('src', morfRoot + '/js/embed.js');
+            embed.setAttribute('src', 'https://cdn.getmorf.io/js/embed.js');
             document.body.appendChild(embed);
         }
         else {
