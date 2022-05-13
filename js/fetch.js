@@ -4,7 +4,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 let formRef = params.form;
 
-var morfRoot = 'https://render.getmorf.io';
+var morfRoot = 'https://render.getmorf.io/v1';
 
 if (formRef){
     const xhr = new XMLHttpRequest();
@@ -17,6 +17,7 @@ if (formRef){
         if (this.status == 200) {
             window.morfConfig = {
                 root: morfRoot,
+                siteKey: 'ad702064b01c41a88c0946b0ea250ce2',
                 targetId: 'morfcontent',
                 definition: JSON.parse(this.responseText)
             };
