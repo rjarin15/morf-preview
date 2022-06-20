@@ -103,7 +103,8 @@
           {
             "type": "file",
             "label": "Add Attachment",
-            "bind": "incident.attachments"
+            "bind": "incident.attachments",
+            "required": false
           }
         ]
       },
