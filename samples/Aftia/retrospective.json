@@ -1,0 +1,208 @@
+{
+  "config": {
+    "submit": "",
+    "siteKey": "4fbfd303f2f74c6ea2ec3bc9ab44d454",
+    "successUrl": "",
+    "theme": "",
+    "externalId": ""
+  },
+  "head": {
+    "title": "Project Retrospective Form",
+    "logo": "https://uploads-ssl.webflow.com/5e0e0d786de93874eb27e0c1/5e138d756b2f0315a9133ee5_AFTIA%20Logo%20Color.svg"
+  },
+  "body": {
+    "items": [
+      {
+        "type": "text",
+        "label": "Company Name",
+        "placeholder": "",
+        "bind": "company",
+        "width": "full"
+      },
+      {
+        "type": "text",
+        "label": "Your name",
+        "placeholder": "",
+        "required": true,
+        "bind": "name",
+        "width": "full"
+      },
+      {
+        "type": "text",
+        "label": "Your Role",
+        "placeholder": "",
+        "required": true,
+        "bind": "role",
+        "width": "full"
+      },
+      {
+        "type": "textarea",
+        "label": "What problem were you hoping to solve or what results were you trying to achieve by working with us?",
+        "placeholder": "",
+        "required": false,
+        "bind": "problem",
+        "width": "full"
+      },
+      {
+        "type": "range",
+        "label": "How Satisfied were you with AFTIA’s services?",
+        "required": true,
+        "maxValue": 5,
+        "minValue": 1
+      },
+      {
+        "type": "radio",
+        "label": "How Satisfied were you with AFTIA’s services?",
+        "options": [
+          {
+            "label": "Very Unsatisfied",
+            "value": "1"
+          },
+          {
+            "label": "Somewhat Unsatisfied",
+            "value": "2"
+          },
+          {
+            "label": "Neither Satsified nor Unsatisfied",
+            "value": "3"
+          },
+          {
+            "label": "Somewhat Satsified",
+            "value": "4"
+          },
+          {
+            "label": "Very Satsified",
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "label": "What Challenges does the implemented solution alleviate?",
+        "placeholder": "",
+        "required": true,
+        "bind": "problem",
+        "width": "full"
+      },
+      {
+        "type": "radio",
+        "label": "Did our services meet your expectations?",
+        "bind": "meetexpecations",
+        "options": [
+          {
+            "label": "Very Unsatisfied",
+            "value": "1"
+          },
+          {
+            "label": "Somewhat Unsatisfied",
+            "value": "2"
+          },
+          {
+            "label": "Neither Satsified nor Unsatisfied",
+            "value": "3"
+          },
+          {
+            "label": "Somewhat Satsified",
+            "value": "4"
+          },
+          {
+            "label": "Very Satsified",
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "label": "What went well with the project, and what if any challenges or obstacles did you encounter?",
+        "placeholder": "",
+        "required": false,
+        "bind": "name",
+        "width": "full"
+      },
+      {
+        "type": "radio",
+        "label": "Would you recommend AFTIA’s services to other companies?",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          },
+          {
+            "label": "Maybe",
+            "value": "Maybe"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "If yes then who?"
+      },
+      {
+        "type": "textarea",
+        "width": "full",
+        "label": "Is there anyone at AFTIA that you would like to give a kudos to?",
+        "bind": "kudos"
+      },
+      {
+        "type": "textarea",
+        "width": "full",
+        "label": "How would you describe your experience working with AFTIA?"
+      },
+      {
+        "type": "radio",
+        "label": "I give AFTIA Permission to feature my testimonial on their Website",
+        "bind": "permission",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "label": "Provide a 2-3 sentence statement on your experience working with AFTIA.",
+        "width": "full",
+        "required": false,
+        "bind": "expwithAftia"
+      },
+            {
+        "Type": "text",
+        "label": "We'd like to use your company logo on our website.  Please upload an image.",
+        "required": false,
+        "width": "full",
+        "type": "file"
+      },
+      {
+        "type": "radio",
+        "label": "Do you plan to continue working with us or are interested in working together again in the future?",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          },
+          {
+            "label": "Maybe",
+            "value": "Maybe"
+          }
+        ]
+      },
+      {
+        "type": "submit",
+        "label": "Submit"
+      }
+    ]
+  }
+}
