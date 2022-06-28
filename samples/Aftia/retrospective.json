@@ -39,20 +39,16 @@
         "type": "textarea",
         "label": "What problem were you hoping to solve or what results were you trying to achieve by working with us?",
         "placeholder": "",
-        "required": false,
+        "required": true,
         "bind": "problem",
         "width": "full"
       },
       {
-        "type": "range",
+        "type": "dropdown",
         "label": "How Satisfied were you with AFTIA’s services?",
+        "width": "full",
         "required": true,
-        "maxValue": 5,
-        "minValue": 1
-      },
-      {
-        "type": "radio",
-        "label": "How Satisfied were you with AFTIA’s services?",
+        "bind": "satisfaction",
         "options": [
           {
             "label": "Very Unsatisfied",
@@ -78,45 +74,18 @@
       },
       {
         "type": "textarea",
-        "label": "What Challenges does the implemented solution alleviate?",
+        "label": "What challenges does the implemented solution alleviate?",
         "placeholder": "",
         "required": true,
-        "bind": "problem",
+        "bind": "challenges",
         "width": "full"
-      },
-      {
-        "type": "radio",
-        "label": "Did our services meet your expectations?",
-        "bind": "meetexpecations",
-        "options": [
-          {
-            "label": "Very Unsatisfied",
-            "value": "1"
-          },
-          {
-            "label": "Somewhat Unsatisfied",
-            "value": "2"
-          },
-          {
-            "label": "Neither Satsified nor Unsatisfied",
-            "value": "3"
-          },
-          {
-            "label": "Somewhat Satsified",
-            "value": "4"
-          },
-          {
-            "label": "Very Satsified",
-            "value": "5"
-          }
-        ]
       },
       {
         "type": "textarea",
         "label": "What went well with the project, and what if any challenges or obstacles did you encounter?",
         "placeholder": "",
-        "required": false,
-        "bind": "name",
+        "required": true,
+        "bind": "wentwell",
         "width": "full"
       },
       {
@@ -139,23 +108,27 @@
       },
       {
         "type": "text",
-        "label": "If yes then who?"
+        "label": "If yes then who?",
+        "required": false
       },
       {
         "type": "textarea",
         "width": "full",
-        "label": "Is there anyone at AFTIA that you would like to give a kudos to?",
-        "bind": "kudos"
+        "label": "Is there anyone at AFTIA that you would like to give kudos to?",
+        "bind": "kudos",
+        "required": false
       },
       {
         "type": "textarea",
         "width": "full",
-        "label": "How would you describe your experience working with AFTIA?"
+        "required": true,
+        "bind": "overallexp",
+        "label": "How would you describe your overall experience working with AFTIA?"
       },
       {
         "type": "radio",
         "label": "I give AFTIA Permission to feature my testimonial on their Website",
-        "bind": "permission",
+        "bind": "permissiontest",
         "options": [
           {
             "label": "Yes",
@@ -167,12 +140,20 @@
           }
         ]
       },
-      {
-        "type": "textarea",
-        "label": "Provide a 2-3 sentence statement on your experience working with AFTIA.",
-        "width": "full",
-        "required": false,
-        "bind": "expwithAftia"
+            {
+        "type": "radio",
+        "label": "I give AFTIA Permission to use my company logo their Website",
+        "bind": "permissionlogo",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ]
       },
             {
         "Type": "text",
@@ -181,8 +162,16 @@
         "width": "full",
         "type": "file"
       },
+            {
+        "type": "textarea",
+        "label": "Please provide a 2-3 sentence statement on your experience working with AFTIA.",
+        "width": "full",
+        "required": false,
+        "bind": "expwithAftia"
+      },
       {
         "type": "radio",
+        "required": true,
         "label": "Do you plan to continue working with us or are interested in working together again in the future?",
         "options": [
           {
@@ -198,6 +187,14 @@
             "value": "Maybe"
           }
         ]
+      },
+      {
+"type": "textarea",
+"label": "Please provide any final comments you would like to share",
+"required": false,
+"bind": "finalcomments",
+"width": "full"
+
       },
       {
         "type": "submit",
