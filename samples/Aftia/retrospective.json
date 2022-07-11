@@ -187,11 +187,10 @@
         ]
       },
       {
-        "Type": "text",
+        "type": "file",
         "label": "Please upload an image of your company logo, yourself or your team.",
         "required": false,
-        "width": "full",
-        "type": "file"
+        "width": "full"
       },
       {
         "type": "textarea",
