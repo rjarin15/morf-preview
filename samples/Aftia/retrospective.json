@@ -38,7 +38,6 @@
       {
         "type": "textarea",
         "label": "What problem were you aiming to solve or what results were you trying to achieve by working with AFTIA?",
-        "placeholder": "",
         "required": true,
         "bind": "problem",
         "width": "full"
@@ -97,7 +96,7 @@
       },
       {
         "type": "radio",
-        "label": "Would you recommend AFTIA’s services to other companies?",
+        "label": "Would you recommend AFTIA's services to other companies?",
         "bind": "recommend",
         "options": [
           {
