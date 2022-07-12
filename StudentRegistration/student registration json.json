@@ -1,0 +1,171 @@
+{
+    "config": {
+      "submit": "https://prod-00.canadacentral.logic.azure.com:443/workflows/f39e289d69294badab395dcc5d98b54c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Id86n4-6ZRnwl0aAin-aOubnMWF5SC_MGNIaPIxpMgo",
+      "siteKey": "4fbfd303f2f74c6ea2ec3bc9ab44d454",
+      "successUrl": "http://getmorf.io/"
+    },
+    "head": {
+      "title": "Registration Form",
+      "logo": "https://uploads-ssl.webflow.com/5e0e0d786de93874eb27e0c1/5e138d756b2f0315a9133ee5_AFTIA%20Logo%20Color.svg"
+    },
+    "body": {
+      "items": [
+        {
+          "type": "panel",
+          "label": "Student Information",
+          "name": "student",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "First name",
+              "bind": "student.fname"
+            },
+            {
+              "type": "text",
+              "label": "Middle name",
+              "bind": "student.mname"
+            },
+            {
+              "type": "text",
+              "label": "Last name",
+              "bind": "student.lname"
+            },
+            {
+              "type": "tel",
+              "label": "Student Cellphone",
+              "bind": "student.cellphone"
+            },
+            {
+              "type": "email",
+              "label": "Student Email",
+              "bind": "student.email"
+            },
+            {
+                "type": "text",
+                "label": "Gender",
+                "bind": "student.gender"
+            },
+            {
+                "type": "date",
+                "label": "DOB",
+                "bind": "student.DOB"
+            },
+            {
+                "type": "text",
+                "label": "Grade",
+                "bind": "student.Grade"
+            },
+            {
+                "type": "text",
+                "label": "Current School",
+                "bind": "student.currentSchool"
+            },
+            {
+                "type": "text",
+                "label": "Goals",
+                "bind": "student.goals"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Parent / Guardian",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "First name",
+              "bind": "pg.fname"
+            },
+            {
+              "type": "text",
+              "label": "Last name",
+              "bind": "pg.lname"
+            },
+            {
+              "type": "tel",
+              "label": "Phone",
+              "bind": "pg.phone"
+            },
+            {
+              "type": "email",
+              "label": "Parent/Guardian Email",
+              "bind": "pg.email"
+            },
+            {
+                "type": "text",
+                "label": "Relationship To The Student",
+                "bind": "pg.relationshipToTheStudent"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Parent/Guardian 2 (Optional)",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "First name",
+              "bind": "pg2.fname",
+              "required": false
+            },
+            {
+              "type": "text",
+              "label": "Last name",
+              "bind": "pg2.lname",
+              "required": false
+            },
+            {
+              "type": "tel",
+              "label": "Phone",
+              "bind": "pg2.phone",
+              "required": false
+            },
+            {
+              "type": "email",
+              "label": "Parent/Guardian 2 Email",
+              "bind": "pg2.email",
+              "required": false
+            },
+            {
+                "type": "text",
+                "label": "Relationship To The Student 2",
+                "bind": "pg2.relationshipToTheStudent2",
+                "required": false
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Street Address",
+          "bind": "streetAddress"
+        },
+        {
+            "type": "text",
+            "label": "City",
+            "bind": "city"
+        },
+        {
+          "type": "text",
+          "label": "Province",
+          "bind": "province"
+        },
+        {
+          "type": "text",
+          "label": "Postal Code",
+          "bind": "postalCode"
+        },
+        {
+          "type": "text",
+          "label": "How Did You Hear About Us",
+          "bind": "howDidYouHearAboutUs"
+        },
+        {
+          "type": "submit",
+          "label": "Submit"
+        }
+      ]
+    }
+  }
