@@ -1,0 +1,329 @@
+{
+    "config": {
+      "submit": "https://prod-30.canadacentral.logic.azure.com:443/workflows/4237c8dd05754a88bd28b71900f58bb4/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ed6Ly30ieeQBPf7fpk9zch9PYsSxB-ouI2MmazE1yfk",
+      "siteKey": "4fbfd303f2f74c6ea2ec3bc9ab44d454",
+      "successUrl": "https://www.getmorf.io/"
+    },
+    "head": {
+      "title": "TENANT BACKGROUND AUTHORIZATION",
+      "logo": "https://cdn.theliftsystem.com/clvgroup/images/logos/1632254452_clv_-_english.png"
+    },
+    "body": {
+      "items": [
+        {
+          "type": "panel",
+          "label": "Tenant",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Fee",
+              "bind": "tenant.fee"
+            },
+            {
+              "type": "text",
+              "label": "Received by",
+              "bind": "tenant.receivedby"
+            },
+            {
+              "type": "tel",
+              "label": "Telephone",
+              "bind": "tenant.telephone"
+            },
+            {
+              "type": "text",
+              "label": "Address of Property ",
+              "bind": "tenant.propertyAddress",
+              "width": "full"
+            },
+            {
+              "type": "text",
+              "label": "Term",
+              "bind": "tenant.term"
+            },
+            {
+              "type": "text",
+              "label": "Rental Amount",
+              "bind": "tenant.rentalAmount"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Info",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Name",
+              "bind": "info.name",
+              "width": "full",
+              "description": "First, Middle and Last Name"
+            },
+            {
+              "type": "date",
+              "label": "Date of Birth",
+              "bind": "info.dob"
+            },
+            {
+              "type": "text",
+              "label": "Social Security Number (SSN)",
+              "bind": "info.ssn"
+            },
+            {
+              "type": "email",
+              "label": "Email",
+              "bind": "info.email",
+              "width": "full"
+            },
+            {
+              "type": "tel",
+              "label": "Phone",
+              "bind": "info.phone"
+            },
+            {
+              "type": "tel",
+              "label": "Work Phone",
+              "bind": "info.workPhone"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Additional Occupants",
+          "width": "full",
+          "items" :[
+            {
+                "type": "panel",
+                "label": "Please enter up to 25 Additional Occupants (List everyone incl. family members who will be occupying the home)",
+                "width": "full",
+                "min": 1,
+                "max": 25,
+                "bind": "Occupants[*]",
+                "items" :[
+                    {
+                        "type": "text",
+                        "label": "Name",
+                        "bind": "Occupants[*].Name"
+                    },
+                    {
+                        "type": "text",
+                        "label": "Relationship",
+                        "bind": "Occupants[*].Relationship"
+                    }
+                ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Present Address",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Address",
+              "bind": "presentAddress.address",
+              "width": "full"
+            },
+            {
+              "type": "textarea",
+              "label": "Reason for Leaving",
+              "bind": "presentAddress.reason",
+              "width": "full"
+            },
+            {
+              "type": "date",
+              "label": "Dates Occupied, From",
+              "bind": "presentAddress.doFrom"
+            },
+            {
+              "type": "date",
+              "label": "To",
+              "bind": "presentAddress.doTo"
+            },
+            {
+              "type": "radio",
+              "label": "Has Notice been given?",
+              "bind": "presentAddress.notice",
+              "options": [
+                {
+                  "value": "Yes",
+                  "label": "Yes"
+                },
+                {
+                  "value": "No",
+                  "label": "No"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "label": "Rent Amount",
+              "bind": "presentAddress.rent"
+            },
+            {
+              "type": "text",
+              "label": "Security Deposit Amount",
+              "bind": "presentAddress.securityDeposit"
+            },
+            {
+              "type": "text",
+              "label": "Landlord/Property Manager name",
+              "bind": "presentAddress.landlord"
+            },
+            {
+              "type": "tel",
+              "label": "Landlord/Manager's Phone",
+              "bind": "presentAddress.landlordPhone"
+            }
+          ]
+        },
+        {
+              "type": "panel",
+              "label": "Previous Address(es)",
+              "width": "full",
+              "items": [
+                {
+                    "type": "panel",
+                    "label": "Please enter up to 5 of your Previous Address(es)",
+                    "width": "full",
+                    "min": 1,
+                    "max": 5,
+                    "bind": "prevAddress[*]",
+                    "items": [
+                    {
+                        "type": "text",
+                        "label": "Address",
+                        "bind": "prevAddress[*].Address",
+                        "width": "full"
+                    },
+                    {
+                        "type": "textarea",
+                        "label": "Reason for Leaving",
+                        "bind": "prevAddress[*].Reason",
+                        "width": "full"
+                    },
+                    {
+                        "type": "date",
+                        "label": "Dates Occupied, From",
+                        "bind": "prevAddress[*].doFrom"
+                    },
+                    {
+                        "type": "date",
+                        "label": "To",
+                        "bind": "prevAddress[*].doTo"
+                    },
+                    {
+                        "type": "text",
+                        "label": "Rent Amount",
+                        "bind": "prevAddress[*].rentAmount"
+                    },
+                    {
+                        "type": "text",
+                        "label": "Landlord/Property Manager name",
+                        "bind": "prevAddress[*].Landlord"
+                    },
+                    {
+                        "type": "tel",
+                        "label": "Landlord/Manager's Phone",
+                        "bind": "prevAddress[*].landlordPhone"
+                    }
+                    ]
+                }
+              ]
+        },
+        {
+          "type": "panel",
+          "label": "Current Income",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Employer's Name",
+              "bind": "income.employer",
+              "width": "full"
+            },
+            {
+              "type": "text",
+              "label": "Your Position/Title",
+              "bind": "income.title"
+            },
+            {
+              "type": "text",
+              "label": "Salary/Wage",
+              "bind": "income.salary"
+            },
+            {
+              "type": "text",
+              "label": "Other Source of Income",
+              "bind": "income.otherSource"
+            },
+            {
+              "type": "text",
+              "label": "Other Source of Income Amount",
+              "bind": "income.amount"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "Past Employment",
+          "width": "full",
+          "items": [
+            {
+              "type": "text",
+              "label": "Employer's Name",
+              "bind": "pastEmployment.name"
+            },
+            {
+              "type": "text",
+              "label": "Your Position/Title",
+              "bind": "pastEmployment.title"
+            },
+            {
+              "type": "text",
+              "label": "Salary/Wage",
+              "bind": "pastEmployment.salary"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "label": "References",
+          "width": "full",
+          "items": [
+            {
+              "type": "panel",
+              "label": "Please enter up to 3 References",
+              "min": 1,
+              "max": 3,
+              "bind": "References[*]",
+              "width": "full",
+              "items": [
+                {
+                  "type": "text",
+                  "label": "Name",
+                  "bind": "References[*].Name"
+                },
+                {
+                  "type": "text",
+                  "label": "Relationship",
+                  "bind": "References[*].Relationship"
+                },
+                {
+                  "type": "text",
+                  "label": "Phone",
+                  "bind": "References[*].Phone"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "submit",
+          "label": "Submit"
+        }
+      ]
+    }
+  }
