@@ -14,9 +14,8 @@ if (formRef){
 
         if (this.status == 200) {
             window.morfConfig = {
-                root: 'https://render.getmorf.io/v1',
                 siteKey: 'ad702064b01c41a88c0946b0ea250ce2',
-                targetId: 'morfcontent',
+                targetSelector: '#morfcontent',
                 definition: JSON.parse(this.responseText)
             };
 
