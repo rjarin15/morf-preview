@@ -1,7 +1,7 @@
 [![GitHub Pages](https://github.com/aftialabs/morf-preview/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/aftialabs/morf-preview/actions/workflows/pages/pages-build-deployment)
 # MORF Preview
 
-A repository containing sample MORF forms used for demonstration purposes.
+A repository containing sample MORF forms used for demonstration purposes. Generic industry specific samples can be found under the `/demos` folder along with presentation instructions.
 
 ## Add a sample
 
@@ -14,6 +14,10 @@ A repository containing sample MORF forms used for demonstration purposes.
 6. Add a commit message and commit the file directly to `main` or use a pull request if you do not have write access to the repository
     ![Commit new file](./.github/docs/commitfile.png "Commit new file")
 7. Navigate to https://preview.getmorf.io/ by adding a `?form=` query string parameter specifying the path of the new file created (e.g. `https://preview.getmorf.io/?form=/samples/generic/basic-enrollment.json`)
+
+## Contributing
+
+To contribute to this repository, submit a new pull request containing new or existing sample updates, documentation, and related assets. Place samples within the existing taxonomy and ensure that the naming convention is respected.
 
 ## Disclaimer
 
