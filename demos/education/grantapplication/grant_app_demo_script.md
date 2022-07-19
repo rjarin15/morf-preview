@@ -59,9 +59,11 @@ Create tags for
 Insert author and date on the first page and Organization.name, Organization.established, and Organization.contact on the second page.
 NOTE: it doesn’t matter what you name these fields. Call them foo and foo_bar if you like.
 The JSON payload from Morf will still match the document.
+
 ![image](https://user-images.githubusercontent.com/17143489/179749841-3610332a-20e5-47ad-8259-e99afd040418.png)
 
 3.	Scroll to the bottom of the document and insert an Adobe Sign tag for Signer 1 with the field type: Signature
+
 ![image](https://user-images.githubusercontent.com/17143489/179749928-2733e833-d2f5-4205-a660-c064a9de3e41.png)
 
 4.	Save the word document
@@ -75,35 +77,43 @@ The JSON payload from Morf will still match the document.
 2.	Show the audience that the Word tags have been turned into form fields!
 3.	Edit the Morf form in the left hand pane.
     - Change the title to Grant Application
-
-'''
+```
 "head": {
- "title": "Grant Application",
- "logo": "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-},
-'''
+    "title": "Grant Application",   
+    "logo": "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+    },
+```
 
 Change the logo to the customer’s logo (if you like)
- 
 
+```
+"head": {
+    "title": "Grant Application",
+    "logo": "https://customer.com//logo.svg"
+},
 
- 
+```
+
 
 Change the Organization Goals field’s type to textarea to make it a multiline field. You can skip this step too if you like
 
+```
+{
+    "type": "textarea",
+    "label": "Organization Goals", "bind": "Organization.Goals"
+},
 
+
+```
 Show the customer that the changes happened in real time!
 
 
-
-
-
-Open Power Automate
+***Open Power Automate***
 
 1.	Edit the flow and copy the HTTP Post URL from the first step.
  
 
- 
+ ![image](https://user-images.githubusercontent.com/17143489/179752274-e9cb2724-33dd-41c0-9efb-cefb567f3851.png)
 
 
 2.	While you are here make sure the Sharepoint step is using the word document you stored there earlier.
@@ -111,25 +121,26 @@ Open Power Automate
  
 4.	Go back to your Morf form and edit the submit value under config. Paste the URL from Power Automate.
 
+```
+{
+    "config": {
+    "submit":
+    "https://prod-18.canadacentral.logic.azure.com:443/workflows/02afda634e0.	",
+    "successUrl": "http://getmorf.io,/", "theme": "",
+    "externalId": ""
+},
+```
 
-
-
-
-
-
-Form Submission
-
+**Form Submission**
 
 1.	Click the preview button in Morf.
 2.	Now fill out the form.	Fill out as much or as little as you like. Just be sure to enter an email address in the Organization email field. This will be picked up by the Power Automate Flow, and the document will be sent there for signature. Click Submit
 
-
-Signing
+**Signing**
 
 1.	Open up the inbox of the email address you specified in the Morf Form. You should have an email from Adobe Sign waiting for you.
 2.	Open it up, show that the document is populated with the information captured in the Morf Form
 3.	Sign the document.
 
-
 You are done. You just built an end to end application right in front of the customer’s eyes. How kick-add is that?
-Have questions? Contact jeff.stanier@afita.com
+Have questions? Contact labsteam@afita.com
