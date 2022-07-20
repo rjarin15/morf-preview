@@ -1,6 +1,6 @@
 {
   "config": {
-    "submit": "",
+    "submit": "https://prod-00.canadacentral.logic.azure.com:443/workflows/0d67d751882a4eadbfbdff33d5c3a3eb/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Fta8i2jva5cfgU6wnokmmPcKhkCjmGp4JIR9DXEXLpg",
     "siteKey": "4fbfd303f2f74c6ea2ec3bc9ab44d454",
     "successUrl": "",
     "theme": "",
