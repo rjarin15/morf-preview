@@ -51,23 +51,23 @@
         "options": [
           {
             "label": "Very Unsatisfied",
-            "value": "1"
+            "value": "Very Unsatisfied"
           },
           {
             "label": "Somewhat Unsatisfied",
-            "value": "2"
+            "value": "Somewhat Unsatisfied"
           },
           {
             "label": "Neither Satsified nor Unsatisfied",
-            "value": "3"
+            "value": "3Neither Satsified nor Unsatisfied"
           },
           {
             "label": "Somewhat Satsified",
-            "value": "4"
+            "value": "Somewhat Satsified"
           },
           {
             "label": "Very Satsified",
-            "value": "5"
+            "value": "Very Satsified"
           }
         ]
       },
@@ -189,7 +189,8 @@
         "type": "file",
         "label": "Please upload an image of your company logo, yourself or your team.",
         "required": false,
-        "width": "full"
+        "width": "full",
+        "bind": "fileattacment"
       },
       {
         "type": "textarea",
