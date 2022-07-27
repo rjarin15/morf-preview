@@ -170,29 +170,6 @@
         "bind": "expwithAftia"
       },
       {
-        "type": "radio",
-        "width": "full",
-        "label": "I grant my permission for my company logo from our website, or the image uploaded below, to be used on the AFTIA website.",
-        "bind": "permissionlogo",
-        "options": [
-          {
-            "label": "Yes",
-            "value": "Yes"
-          },
-          {
-            "label": "No",
-            "value": "No"
-          }
-        ]
-      },
-      {
-        "type": "file",
-        "label": "Please upload an image of your company logo, yourself or your team.",
-        "required": false,
-        "width": "full",
-        "bind": "fileattacment"
-      },
-      {
         "type": "textarea",
         "label": "Please provide any final comments you would like to share.",
         "required": false,
